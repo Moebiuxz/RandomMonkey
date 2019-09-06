@@ -1,1 +1,5 @@
-<p>monkey-list works!</p>
+<ul>
+  <li *ngFor="let monkey of monkeyList">
+    {{ monkey | json}}
+  </li>
+</ul>

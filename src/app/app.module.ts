@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { MonkeyListComponent } from './content/monkey-list/monkey-list.component';
 import { MonkeyRegisterComponent } from './content/monkey-register/monkey-register.component';
 
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
@@ -18,7 +20,9 @@ import {AngularFireDatabaseModule} from '@angular/fire/database';
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
