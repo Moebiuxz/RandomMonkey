@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {OptionService} from "./providers/option.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'RandomMonkey';
+  public show: any;
+
+  constructor(private optionService: OptionService) {
+    optionService.getOptions().valueChanges().subscribe(d => {
+      this.show = d[0].show;
+    });
+  }
 }
