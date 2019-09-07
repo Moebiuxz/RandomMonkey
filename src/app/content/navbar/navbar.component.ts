@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {OptionService} from '../../providers/option.service';
 import {Option} from '../../model/option';
+import {AppComponent} from '../../app.component';
 
 @Component({
   selector: 'app-navbar',
@@ -10,13 +11,12 @@ import {Option} from '../../model/option';
 export class NavbarComponent implements OnInit {
   private option = new Option();
   private keyView = 'views';
-  constructor(private optionService: OptionService) { }
+  constructor(private optionService: OptionService, private app: AppComponent) { }
 
   ngOnInit() {
   }
 
   chooseOption(show: number) {
-    this.option.show = show;
-    this.optionService.updateOption(this.keyView, this.option);
+    this.app.show = show;
   }
 }
