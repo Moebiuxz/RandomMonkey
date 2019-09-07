@@ -11,13 +11,15 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { NavbarComponent } from './content/navbar/navbar.component';
+import { MonkeyCardsComponent } from './content/monkey-cards/monkey-cards.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MonkeyListComponent,
     MonkeyRegisterComponent,
-    NavbarComponent
+    NavbarComponent,
+    MonkeyCardsComponent
   ],
   imports: [
     BrowserModule,
