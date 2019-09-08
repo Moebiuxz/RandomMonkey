@@ -1,1 +1,26 @@
-<p *ngFor="let m of monkeys | async">{{m | json}}</p>
+<!--<p *ngFor="let m of monkeys | async">{{m | json}}</p>-->
+<div class="container">
+  <button type="button" class="btn btn-danger" (click)="getMonkeyData()">RANDOM</button>
+  <p></p>
+  <div class="row">
+    <!--<div class="probar">-->
+      <div class="col-4" *ngFor="let monkey of monkeyList">
+        <p class="number" hidden>{{monkey.position}}</p>
+        <div class="card mb-3" style="max-width: 18rem;">
+          <div class="row no-gutters">
+            <div class="border-dark col-md-4">
+              <img src="" alt="">
+            </div>
+            <div class="text-white bg-info col-md-8">
+              <div class="card-header">Posición: {{monkey.position}}</div>
+              <div class="card-body">
+                <h5 class="card-title">Nombre</h5>
+                <p class="card-text">{{monkey.name + ' ' + monkey.lastname1}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--</div>-->
+  </div>
+</div>

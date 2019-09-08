@@ -1,5 +1,5 @@
 <ul>
-  <li *ngFor="let monkey of monkeyList">
-    {{ monkey | json}}
+  <li *ngFor="let monkey of monkeys | async">
+    {{ monkey | json }}
   </li>
 </ul>

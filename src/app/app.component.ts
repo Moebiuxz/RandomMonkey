@@ -11,6 +11,6 @@ export class AppComponent {
   public show: any;
 
   constructor(private optionService: OptionService) {
-    this.show = 1;
+    this.show = 3;
   }
 }
